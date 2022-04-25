@@ -31,7 +31,7 @@ width: '100%'
         padding: ['20px'],
         pt: '0',
         pb:'20',
-        
+
     },
     leftButton: {
         height: '50px',
@@ -40,7 +40,7 @@ width: '100%'
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: 'url(./BannerTest.png)',
+        backgroundImage: 'url(./bannerTest.png)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'left',
         color: '#43D2FB',
