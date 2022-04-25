@@ -6,16 +6,26 @@ import Image from 'next/image';
 // Media
 import SubText from '../../../public/SubText.png';
 import Superman from '../../../public/Superman.png';
+import LegoLogo from '../../../public/LegoLogo.png';
+
 
 function Hero() {
     return (
         <Box sx={styles.container}>
+            <Box sx={styles.wrapper}>
         <Box sx={styles.leftContainer}>
 <Text as='h1'>The Jarvis Collective</Text>
-<Image src={SubText} height='90px' padding='20px' alt='SubText'/>
+<Box sx={styles.subText}>
+        <Text as='h3'>Custom</Text>
+        <Image src={LegoLogo} height='25px' width='25px'/>
+        <Text as='h3'>Minifigs</Text>
+        </Box>
         </Box>
         <Box sx={styles.rightContainer}>
-        <Image src={Superman} height='400px' width='250px' alt='Superman'/>
+            <Box sx={styles.heroImgContainer}>
+        <Image src={Superman} height='400px' width='250px' alt='Superman' />
+        </Box>
+        </Box>
         </Box>
         </Box>
     )
@@ -36,11 +46,36 @@ const styles = {
 
         h1: {
         fontSize: ['35px'],
-        fontFamily: 'Anton,sans-serif',
-         textShadow: '3px 3px black',
-         color: 'white'
+        fontFamily: 'Bangers,sans-serif',
+         textShadow: '2px 2px black',
+         color: 'white',
+         margin: ['15px'],
+         mr: ['5px'],
+         ml: ['5px'],
+         mb: ['9px']
         }
+    },
+    wrapper: {
+        mt: '50px',
+        display: 'flex',
+        flexDirection: ['column'],
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    subText: {
+        display: 'flex',
+        justifyContent: 'center',
+        h3: {
+            pl: ['10px'],
+            pr: ['10px'],
+            fontFamily: 'Anton,sans-serif',
+            color: '#ffff'
+        }
+    },
+    heroImgContainer: {
+        mt: '30px'
     }
+   
 }
 
 
