@@ -22,8 +22,8 @@ function index() {
 const styles = {
     container: {
         height: '100%',
-        // backgroundImage: 'url(HomeBg.png)'
-         backgroundImage: 'url(/backgroundTwo.png)',
+        backgroundImage: 'url(/HomeBg.png)',
+        //  backgroundImage: 'url(/backgroundTwo.png)',
          backgroundPosition: 'center',
          backgroundRepeat: 'no-repeat',
          backgroundAttachment: 'fixed',
