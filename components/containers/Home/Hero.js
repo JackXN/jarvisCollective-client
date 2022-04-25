@@ -9,6 +9,9 @@ import Superman from '../../../public/Superman.png';
 import LegoLogo from '../../../public/LegoLogo.png';
 
 
+//Icons
+import {FiArrowDown as DownArrow} from 'react-icons/fi';
+
 function Hero() {
     return (
         <Box sx={styles.container}>
@@ -24,6 +27,9 @@ function Hero() {
         <Box sx={styles.rightContainer}>
             <Box sx={styles.heroImgContainer}>
         <Image src={Superman} height='400px' width='250px' alt='Superman' />
+        </Box>
+        <Box sx={styles.arrowContainer}>
+            <DownArrow/>
         </Box>
         </Box>
         </Box>
@@ -46,8 +52,8 @@ const styles = {
 
         h1: {
         fontSize: ['35px'],
-        fontFamily: 'Bangers,sans-serif',
-         textShadow: '2px 2px black',
+        fontFamily: 'Anton,sans-serif',
+         textShadow: '1px 1px black',
          color: 'white',
          margin: ['15px'],
          mr: ['5px'],
@@ -73,7 +79,15 @@ const styles = {
         }
     },
     heroImgContainer: {
-        mt: '30px'
+        mt: '15px'
+    },
+    arrowContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'darkgray',
+        fontSize: '23px',
+        mt: '20px'
     }
    
 }
