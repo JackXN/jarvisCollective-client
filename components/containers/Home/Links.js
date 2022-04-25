@@ -43,11 +43,15 @@ width: '100%'
         backgroundImage: 'url(./bannerTest.png)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'left',
-        color: '#43D2FB',
+        color: '#fff',
+        mr: '5px',
+        borderRadius: '10px'
 
     },
     rightButton: {
         height: '50px',
+        borderRadius: '10px',
+        ml: '5px',
         flex: 1,
         display: 'flex',
         justifyContent: 'center',
