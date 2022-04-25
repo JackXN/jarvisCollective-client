@@ -12,6 +12,11 @@ import LegoLogo from '../../../public/LegoLogo.png';
 //Icons
 import {FiArrowDown as DownArrow} from 'react-icons/fi';
 
+
+
+// Components
+import Links from './Links';
+
 function Hero() {
     return (
         <Box sx={styles.container}>
@@ -29,9 +34,10 @@ function Hero() {
         <Image src={Superman} height='400px' width='250px' alt='Superman' />
         </Box>
         <Box sx={styles.arrowContainer}>
-            <DownArrow/>
+            {/* <DownArrow/> */}
         </Box>
         </Box>
+        <Links/>
         </Box>
         </Box>
     )
