@@ -30,7 +30,8 @@ width: '100%'
         color: '#fff',
         padding: ['20px'],
         pt: '0',
-        pb:'20'
+        pb:'20',
+        
     },
     leftButton: {
         height: '50px',
