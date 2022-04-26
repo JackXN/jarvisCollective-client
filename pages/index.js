@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <Box sx={styles.container}>
 <Homepage/>
+    
     </Box>
   )
 }
