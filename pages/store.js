@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import Image from "@chakra-ui/image";
-import Link from 'next/link';
+
 
 import Product from "../components/containers/Store/Product";
 import axios from "axios";
@@ -9,7 +9,7 @@ import { Box, StylesProvider, Text } from "@chakra-ui/react";
 import {AiFillHome as Home} from 'react-icons/ai';
 import {useRouter} from 'next/router';
 import { Router } from "react-router";
-import {Button} from '@chakra-ui/react';
+import {Link} from '@chakra-ui/react';
 
 const BASE_URL = "http://localhost:5000";
 
@@ -67,14 +67,15 @@ const Products = ({ cat, filters, sort }) => {
         <Box>
 <Text as='h1'ml='30px !important' margin='0' >Collections</Text>
 </Box>
-<Box sx={styles.iconContainer}><Button to='/home'><Home/></Button></Box>
+<Box sx={styles.iconContainer}><Link href='/'><Home/></Link></Box>
 </Box>
 <Box sx={styles.cardContainer}>
     <Box sx={styles.flexTest}>
-{products.map((item) => <Product  item={item} key={item.id} />)}
+{products.map((item) => <Product item={item} key={item.id} />)}
 </Box>
 </Box>
 </Box>
+
 </Box>
       </Box>
     </>
@@ -113,7 +114,9 @@ const styles = {
   },
   flexTest: {
       display:"flex",
-      flexDirection: ['column', 'column', 'row']
+      alignItems:'center',
+      justifyContent: 'center',
+      flexWrap: 'wrap'
   },
   textContainer: {
       display:'flex',
