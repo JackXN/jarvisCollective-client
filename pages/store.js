@@ -11,7 +11,7 @@ import {useRouter} from 'next/router';
 import { Router } from "react-router";
 import {Link} from '@chakra-ui/react';
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const Products = ({ cat, filters, sort }) => {
     
