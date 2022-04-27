@@ -61,7 +61,9 @@ const Products = ({ cat, filters, sort }) => {
 <Text as='h1'>Collections</Text>
 </Box>
 <Box sx={styles.cardContainer}>
+    <Box sx={styles.flexTest}>
 {products.map((item) => <Product item={item} key={item.id} />)}
+</Box>
 </Box>
 </Box>
 </Box>
@@ -72,8 +74,6 @@ const Products = ({ cat, filters, sort }) => {
 
 const styles = {
   container: {
-    display: "flex",
-    flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
     padding: '30px'
@@ -86,7 +86,7 @@ const styles = {
   collectionsContainer: {
       textAlign: 'left',
       fontSize: ['40px'],
-      display: 'flex',
+      display: 'flex',                                       
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
@@ -101,6 +101,10 @@ const styles = {
   cardContainer: {
      mt:'35px',
      display: 'flex'
+  },
+  flexTest: {
+      display:"flex",
+      flexDirection: ['column', 'column', 'row']
   }
 };
 

@@ -65,8 +65,10 @@ function Product({item}) {
 
       return (
          
-        <Box sx={styles.container} >
-            <Box sx={styles.infoCard} >
+        <Box sx={styles.container}>
+
+
+            <Box sx={styles.infoCard}>
         <Box sx={styles.imgContainer}>
             <Image src={item.img} height='100%' width='100%' alt='Celebs'/>
         </Box>
@@ -75,8 +77,9 @@ function Product({item}) {
             <Text as='h1'>{item.title}</Text>
             
         </Box>
-        
         </Box>
+
+
       </Box>
       
      )
@@ -85,7 +88,7 @@ function Product({item}) {
  const styles = {
      container: {
          display: 'flex',
-         flexDirection: ['column'],
+         flexDirection: 'column',
          alignItems:'center',
          justifyContent: 'center',
          textAlign: 'center',
@@ -104,11 +107,8 @@ function Product({item}) {
      infoCard: {
        height: '100%',
        background:'white',
-       transition: '1s',
+       transition: '0.56s',
        cursor: 'pointer',
-      
-     
-
        "&:hover": {
         transform: 'translateY(-8px)',
         

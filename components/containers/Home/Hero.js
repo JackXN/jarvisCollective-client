@@ -75,7 +75,7 @@ const styles = {
         justifyContent: 'center'
     },
     subText: {
-        display: 'flex',
+        // display: 'flex',
         justifyContent: 'center',
         h3: {
             pl: ['10px'],
