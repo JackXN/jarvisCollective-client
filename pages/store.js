@@ -22,8 +22,8 @@ const Products = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-            ? `${BASE_URL}/api/collections?category=${cat}`
-            : `${BASE_URL}/api/collections`
+            ? `${BASE_URL}/api/products?category=${cat}`
+            : `${BASE_URL}/api/products`
         );
         setProducts(res.data);
         console.log(res.data);
