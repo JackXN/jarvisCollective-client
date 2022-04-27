@@ -81,7 +81,8 @@ const styles = {
         }
     },
     heroImgContainer: {
-        mt: '15px'
+        mt: '15px',
+        padding:['35px']
     },
     arrowContainer: {
         display: 'flex',
