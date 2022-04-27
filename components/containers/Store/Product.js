@@ -66,8 +66,6 @@ function Product({item}) {
       return (
          
         <Box sx={styles.container}>
-
-
             <Box sx={styles.infoCard}>
         <Box sx={styles.imgContainer}>
             <Image src={item.img} height='100%' width='100%' alt='Celebs'/>
