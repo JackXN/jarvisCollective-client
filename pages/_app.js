@@ -1,7 +1,12 @@
 import '../styles/globals.css'
 import {ChakraProvider} from '@chakra-ui/react';
 import {extendTheme} from '@chakra-ui/react';
+import {Provider} from 'react-redux';
+import { createStore, applyMiddleware } from 'redux'; 
 
+
+
+const store = createStore(() => [], {}, applyMiddleware())
 
 
 const theme = extendTheme({
@@ -24,7 +29,9 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }) {
   return (
   <ChakraProvider theme={theme}>
+    <Provider store={store}>
  <Component {...pageProps} />
+ </Provider>
   </ChakraProvider>
 )
 }
