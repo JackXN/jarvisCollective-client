@@ -4,6 +4,7 @@ import React from 'react'
 import {Box, Text, Button} from '@chakra-ui/react';
 import { m } from 'framer-motion';
 import {Link} from '@chakra-ui/react';
+import {AiOutlineShoppingCart as ShoppingCard, AiOutlineArrowRight as Arrow} from 'react-icons/ai'
 
 
 function Links() {
@@ -11,10 +12,12 @@ function Links() {
         <Box sx={styles.container}>
             <Box sx={styles.buttonContainer}>
                 <Box sx={styles.leftButton}>
-                <Link href='/store'>Store</Link>
+                    <Arrow/>
+                <Link href='/store' ml='6px'>Enter Site</Link>
                 </Box>
                 <Box sx={styles.rightButton}>
-                <Text as='h3'>Enter Site</Text>
+                    <ShoppingCard/>
+                <Link href='/store' ml='6px'> Store</Link>
                 </Box> 
             </Box>
         </Box>
@@ -41,7 +44,7 @@ width: '100%'
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: 'url(./bannerTest.png)',
+        background: '#53A3D0',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'left',
         color: '#fff',
@@ -57,9 +60,7 @@ width: '100%'
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundImage: 'url(./BannerTest2.png)',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        background: '#C12525',
         
         
     }

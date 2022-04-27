@@ -54,7 +54,7 @@ const styles = {
 
         h1: {
         fontSize: ['35px'],
-        fontFamily: 'Anton,sans-serif',
+        fontFamily: 'Bangers,sans-serif',
          textShadow: '1px 1px black',
          color: 'white',
          margin: ['15px'],
