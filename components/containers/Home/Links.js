@@ -3,6 +3,7 @@ import React from 'react'
 // Components
 import {Box, Text, Button} from '@chakra-ui/react';
 import { m } from 'framer-motion';
+import {Link} from '@chakra-ui/react';
 
 
 function Links() {
@@ -10,7 +11,7 @@ function Links() {
         <Box sx={styles.container}>
             <Box sx={styles.buttonContainer}>
                 <Box sx={styles.leftButton}>
-                <Text as='h3'>Contact Us</Text>
+                <Link href='/store'>Store</Link>
                 </Box>
                 <Box sx={styles.rightButton}>
                 <Text as='h3'>Enter Site</Text>

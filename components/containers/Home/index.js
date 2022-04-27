@@ -3,7 +3,7 @@ import React from "react";
 // Media
 import Image from "next/image";
 import Logo from "../../../public/TextLogo.png";
-
+import HeroImg from '../../../public/HeroImg.png';
 //Components
 import { Box, Text } from "@chakra-ui/react";
 import Hero from "./Hero";
@@ -26,9 +26,9 @@ function index() {
 
 const styles = {
   container: {
-    height: "100%",
-    backgroundImage: "url(/HomeBg.png)",
-    //  backgroundImage: 'url(/backgroundTwo.png)',
+    height: "105vh",
+    // backgroundColor: '#282C43',
+     backgroundImage: 'url(/background.png)',
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",

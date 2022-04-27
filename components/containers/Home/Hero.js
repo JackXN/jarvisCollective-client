@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // Media
 import SubText from '../../../public/SubText.png';
-import Superman from '../../../public/Superman.png';
+import Superman from '../../../public/HeroImg.png';
 import LegoLogo from '../../../public/LegoLogo.png';
 
 
@@ -22,17 +22,12 @@ function Hero() {
         <Box sx={styles.container}>
             <Box sx={styles.wrapper}>
         <Box sx={styles.leftContainer}>
-<Text as='h1'>The Jarvis Collective</Text>
-<Box sx={styles.subText}>
-        <Text as='h3'>Custom</Text>
-        <Image src={LegoLogo} height='25px' width='25px'/>
-        <Text as='h3'>Minifigs</Text>
+        <Box sx={styles.heroImgContainer}>
+        <Image src={Superman} height='500px' width='500px' alt='Superman' />
         </Box>
         </Box>
         <Box sx={styles.rightContainer}>
-            <Box sx={styles.heroImgContainer}>
-        <Image src={Superman} height='400px' width='250px' alt='Superman' />
-        </Box>
+       
         <Box sx={styles.arrowContainer}>
             {/* <DownArrow/> */}
         </Box>
@@ -49,7 +44,8 @@ const styles = {
         display: 'flex',
         flexDirection: ['column'],
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        
     },
     leftContainer: {
         display: 'flex',
