@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react'
 
 // Componenets
-import {Box, Text} from '@chakra-ui/react';
+import {Box, Text, Fade, ScaleFade, Slide, SlideFade, useDisclosure} from '@chakra-ui/react';
+// import Image from 'next/image';
+import {Image} from '@chakra-ui/image'
 // Media
-// import CelebCollection from '../public/CelebCollection.png';
 
 
 // import {useLocation} from 'react-router-dom';
 import { useDispatch } from "react-redux";
+import { m } from 'framer-motion';
+
+
 
 
 
@@ -16,6 +20,9 @@ import { useDispatch } from "react-redux";
 
 
 function Product({item}) {
+    const { isOpen, onToggle } = useDisclosure();
+
+
 
     const id = location.pathname.split('/')[2];
     const [product,setProduct] = useState({});
@@ -23,6 +30,9 @@ function Product({item}) {
     const [color,setColor] = useState('');
     const [size, setSize] = useState("");
     const dispatch = useDispatch();
+
+
+
 
     useEffect(() => {
         const getProduct = async () => {
@@ -50,25 +60,96 @@ function Product({item}) {
  
 
 
+
+  
+
       return (
-        <Box sx={styles.container}>
+         
+        <Box sx={styles.container} >
+            <Box sx={styles.infoCard} >
+        <Box sx={styles.imgContainer}>
+            <Image src={item.img} height='100%' width='100%' alt='Celebs'/>
+        </Box>
+        <Box sx={styles.textContainer}>
+            <Text as='h2'>Collection</Text>
+            <Text as='h1'>{item.title}</Text>
+            
+        </Box>
         
+        </Box>
       </Box>
+      
      )
  }
  
  const styles = {
      container: {
          display: 'flex',
+         flexDirection: ['column'],
          alignItems:'center',
          justifyContent: 'center',
          textAlign: 'center',
-         // margin:'20px',
-         color: 'black',
-         width: '450px',
-        
+         color: 'black',    
+         background: '#2B5C7B',
+        borderBottom: '10px solid #2B5C7B',
+        margin: '20px',
+        border:'solid gray px',
+        borderRadius: '20px',
+        mb: ['90px'],
+      
+       
+           
          
      },
+     infoCard: {
+       height: '100%',
+       background:'white',
+       transition: '1s',
+       cursor: 'pointer',
+      
+     
+
+       "&:hover": {
+        transform: 'translateY(-8px)',
+        
+        h2: {
+            
+            // fontSize: '25px',
+            transition: '1s'
+        },
+        h1: {
+            // fontSize:'30px',
+            transition: '1s'
+        },
+
+    
+        
+       }
+       
+        
+     },
+     textContainer: {
+         padding: '16px',
+        
+
+         h2: {
+             color: '#F09E4B',
+             fontSize: ['11px'],
+             textAlign: 'left',
+             
+         },
+            h1: {
+                fontSize: ['18px'],
+                textAlign:['left']
+                
+            }
+     },
+     blueBorder: {
+         height: '10px',
+         background:'black',
+         border: 'none'
+     }
+     
  
 
  }

@@ -57,8 +57,12 @@ const Products = ({ cat, filters, sort }) => {
       <Box sx={styles.container}>
 <Box sx={styles.wrapper}>
 <Box sx={styles.collectionsContainer}>
+    <Box sx={styles.textContainer}>
 <Text as='h1'>Collections</Text>
-{products.map((item) => <Product item={item} key={item.id}/>)}
+</Box>
+<Box sx={styles.cardContainer}>
+{products.map((item) => <Product item={item} key={item.id} />)}
+</Box>
 </Box>
 </Box>
       </Box>
@@ -75,16 +79,28 @@ const styles = {
     padding: '30px'
   },
   wrapper: {
-    height: '150px',
     width: '100%',
-    background: 'orange',
     padding:'10px',
-    fontFamily: 'Anton,san-serif'
+    fontFamily: 'Bangers,san-serif'
   },
   collectionsContainer: {
       textAlign: 'left',
-      fontSize: ['40px']
+      fontSize: ['40px'],
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100%'
+
+
       
+  },
+  textContainer: {
+      mb: ['30px']
+  },
+  cardContainer: {
+     mt:'35px',
+     display: 'flex'
   }
 };
 
