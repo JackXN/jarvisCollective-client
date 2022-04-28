@@ -11,7 +11,7 @@ import {useRouter} from 'next/router';
 import { Router } from "react-router";
 import {Link} from '@chakra-ui/react';
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = 'http://localhost:5000';
 
 const Products = ({ cat, filters, sort }) => {
     
@@ -22,8 +22,8 @@ const Products = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-            ? `${BASE_URL}/api/products?category=${cat}`
-            : `${BASE_URL}/api/products`
+            ? `${BASE_URL}/api/collections?category=${cat}`
+            : `${BASE_URL}/api/collections`
         );
         setProducts(res.data);
         console.log(res.data);
@@ -101,9 +101,6 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       height: '100%'
-
-
-      
   },
   textContainer: {
       mb: ['30px']
@@ -123,9 +120,6 @@ const styles = {
       textAlign: 'center',
       justifyContent: 'center',
       alignItems: 'center'
-     
-      
-
   },
   iconContainer: {
       position: ['relative'],

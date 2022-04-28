@@ -9,7 +9,7 @@ import {Image} from '@chakra-ui/image'
 
 // import {useLocation} from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { m } from 'framer-motion';
+
 
 
 
@@ -31,13 +31,14 @@ function Product({item}) {
     const [size, setSize] = useState("");
     const dispatch = useDispatch();
 
+    const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 
 
     useEffect(() => {
         const getProduct = async () => {
           try {
-            const res = await publicRequest.get("http://localhost:5000/api/collections/find/" + id);
+            const res = await publicRequest.get(`${BASE_URL}/collections/find/` + id);
             setProduct(res.data);
             // console.log(res.data)
         } catch {}
