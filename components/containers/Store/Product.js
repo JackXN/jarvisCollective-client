@@ -12,13 +12,6 @@ import { useDispatch } from "react-redux";
 
 
 
-
-
-
-
-
-
-
 function Product({item}) {
     const { isOpen, onToggle } = useDisclosure();
 
