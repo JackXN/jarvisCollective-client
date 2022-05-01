@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 // Components
 import {Box, Text} from '@chakra-ui/react';
 import axios from 'axios';
-
+import Header from './Header'
 
 // import styles from '../Store/Collection';
 
@@ -30,7 +30,9 @@ useEffect(() => {
 
 
     return (
-    
+    <>
+    <Box sx={styles.wrapper}>
+    <Header/>
           <Box sx={styles.container}>
           <Text>Minifigs</Text>
              {minifigs.map((item) => (
@@ -47,9 +49,10 @@ useEffect(() => {
 
 ))}
       </Box>
+      </Box>
 
 
-
+</>
     )
 }
 
@@ -109,6 +112,10 @@ export const styles = {
         height: '10px',
         background:'black',
         border: 'none'
+    },
+    wrapper: {
+        height: '150%',
+        background: '#1F1E1E',
     }
     
 
