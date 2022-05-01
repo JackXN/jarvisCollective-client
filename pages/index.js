@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 // Page Components
 import Homepage from '../components/containers/Home/index';
-
+import Minifigs from '../components/containers/Minifigs/Minifigs';
 // Components
 import { Box, Text } from '@chakra-ui/react';
 
@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <Box sx={styles.container}>
 <Homepage/>
+<Minifigs/>
     
     </Box>
   )

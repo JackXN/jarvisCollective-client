@@ -30,12 +30,10 @@ useEffect(() => {
 
 
     return (
-    <Box>
+    
           <Box sx={styles.container}>
           <Text>Minifigs</Text>
              {minifigs.map((item) => (
-                 
-             
             <Box sx={styles.infoCard} key={item.title}>
                
         <Box sx={styles.imgContainer}>
@@ -51,32 +49,24 @@ useEffect(() => {
       </Box>
 
 
-    </Box>
+
     )
 }
 
 export const styles = {
+
     container: {
+        borderBottom: '10px solid #2B5C7B',
         display: 'flex',
         flexDirection: 'column',
-        alignItems:'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        color: 'black',    
-        background: '#2B5C7B',
-       borderBottom: '10px solid #2B5C7B',
-       
-       border:'solid gray px',
-       borderRadius: '20px',
-       mb: ['90px'],
-     
-      
-          
+        alignItems: 'center',
+        justifyContent: 'center'
+
         
     },
+  
     infoCard: {
       height: '100%',
-      background:'white',
       transition: '0.56s',
       cursor: 'pointer',
       "&:hover": {

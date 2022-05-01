@@ -56,7 +56,6 @@ function Collection({item}) {
       };
  
       return (
-         
         <Box sx={styles.container}>
             <Box sx={styles.infoCard}>
         <Box sx={styles.imgContainer}>

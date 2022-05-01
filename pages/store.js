@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import Image from "@chakra-ui/image";
-import Minifigs from "../components/containers/Store/Minifigs";
+
 
 import Product from "../components/containers/Store/Collection";
 import axios from "axios";
@@ -38,32 +38,20 @@ const Products = ({ cat, filters, sort }) => {
     getProducts();
   }, [cat]);
 
-  useEffect(() => {
-    cat &&
-      setFilteredProducts(
-        products.filter((item) =>
-          Object.entries(filters).every(([key, value]) =>
-            item[key].includes(value)
-          )
-        )
-      );
-  }, [products, cat, filters]);
 
   useEffect(() => {
-    if (sort === "newest") {
-      setFilteredProducts((prev) =>
-        [...prev].sort((a, b) => a.createdAt - b.createdAt)
-      );
-    } else if (sort === "asc") {
-      setFilteredProducts((prev) =>
-        [...prev].sort((a, b) => a.price - b.price)
-      );
-    } else {
-      setFilteredProducts((prev) =>
-        [...prev].sort((a, b) => b.price - a.price)
-      );
-    }
-  }, [sort]);
+    const getMinifigs = async() => {
+      try {
+        const res = await axios.get(
+          `${BASE_URL}/api/products`
+        );
+        setMinifigs(res.data)
+      }catch(err) {}
+    };
+    getMinifigs();
+  }, [])
+
+  
   return (
     <>
       <Box sx={styles.container}>
@@ -78,13 +66,12 @@ const Products = ({ cat, filters, sort }) => {
 <Box sx={styles.cardContainer}>
     <Box sx={styles.flexTest}>
 {products.map((item) => <Product item={item} key={item.id} />)}
+</Box>
+</Box>
 
 </Box>
+</Box>
 
-</Box>
-</Box>
-<Minifigs/>
-</Box>
       </Box>
     </>
   );
