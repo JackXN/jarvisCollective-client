@@ -9,7 +9,7 @@ import {Image} from '@chakra-ui/image'
 
 // import {useLocation} from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import Minifigs from './Minifigs';
+import Minifigs from '../Minifigs/Minifigs';
 
 
 
@@ -62,8 +62,12 @@ function Collection({item}) {
             <Image src={item.img} height='100%' width='100%' alt='Celebs'/>
         </Box>
         <Box sx={styles.textContainer}>
+
             <Text as='h2'>Collection</Text>
             <Text as='h1'>{item.title}</Text>
+            <Box sx={styles.priceContainer}>
+              <Text as='p'>{item.price}</Text>
+            </Box>
         </Box>
         </Box>
 

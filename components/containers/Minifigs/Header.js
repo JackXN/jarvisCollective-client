@@ -11,23 +11,30 @@ import TextLogo from '../../../public/CustomMinifigs.png'
 
 export default function Header() {
     return (
+        <Box sx={styles.wrapper}>
         <Box sx={styles.container}>
             <Box sx={styles.textContainer}>
+                <Box sx={styles.imgContainer}>
        <Image src={TextLogo} alt='Custom Minifigs'/>
+       </Box>
             </Box>
+        </Box>
         </Box>
     )
 }
 
 const styles = {
+    wrapper: {
+padding: ['25px']
+    },
     container: {
-padding: ['20px']
+padding: ['15px'],
+background:'#2F2E2E',
+borderRadius: '20px',
     },
     textContainer: {
-        color: 'white',
-        background:'#2F2E2E',
         padding: '10px',
-        borderRadius: '20px'
-
-    }
+        borderRadius: '20px',
+    },
+   
 }
