@@ -9,10 +9,13 @@ import {Image} from '@chakra-ui/image'
 
 // import {useLocation} from 'react-router-dom';
 import { useDispatch } from "react-redux";
+import Minifigs from './Minifigs';
 
 
 
-function Product({item}) {
+
+
+function Collection({item}) {
     const { isOpen, onToggle } = useDisclosure();
 
 
@@ -52,11 +55,6 @@ function Product({item}) {
         );
       };
  
-
-
-
-  
-
       return (
          
         <Box sx={styles.container}>
@@ -67,7 +65,6 @@ function Product({item}) {
         <Box sx={styles.textContainer}>
             <Text as='h2'>Collection</Text>
             <Text as='h1'>{item.title}</Text>
-            
         </Box>
         </Box>
 
@@ -146,5 +143,5 @@ function Product({item}) {
 
  }
  
- export default Product
+ export default Collection
  

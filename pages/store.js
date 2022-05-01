@@ -1,8 +1,8 @@
 // import { Link } from "react-router-dom";
 import Image from "@chakra-ui/image";
+import Minifigs from "../components/containers/Store/Minifigs";
 
-
-import Product from "../components/containers/Store/Product";
+import Product from "../components/containers/Store/Collection";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Box, StylesProvider, Text } from "@chakra-ui/react";
@@ -11,11 +11,17 @@ import {useRouter} from 'next/router';
 import { Router } from "react-router";
 import {Link} from '@chakra-ui/react';
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+//! PROD URL.... NEED PUBLIC REQUEST FUNCTIONS LATER ON...
+
+
+// const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const BASE_URL = 'http://localhost:5000';
 
 const Products = ({ cat, filters, sort }) => {
     
   const [products, setProducts] = useState([]);
+  const [minifigs, setMinifigs] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
     const getProducts = async () => {
@@ -26,7 +32,7 @@ const Products = ({ cat, filters, sort }) => {
             : `${BASE_URL}/api/collections`
         );
         setProducts(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       } catch (err) {}
     };
     getProducts();
@@ -72,17 +78,19 @@ const Products = ({ cat, filters, sort }) => {
 <Box sx={styles.cardContainer}>
     <Box sx={styles.flexTest}>
 {products.map((item) => <Product item={item} key={item.id} />)}
-</Box>
-</Box>
+
 </Box>
 
+</Box>
+</Box>
+<Minifigs/>
 </Box>
       </Box>
     </>
   );
 };
 
-const styles = {
+export const styles = {
   container: {
     alignItems: "center",
     justifyContent: "center",
