@@ -8,7 +8,7 @@ import Header from "./Header";
 import { Image } from "@chakra-ui/react";
 // import { styles } from '../Store/Collection';
 // import styles from '../Store/Collection';
-
+import Background from '../../../public/backgroundTest.png'
 const BASE_URL = "http://localhost:5000";
 
 function Minifigs() {
@@ -62,7 +62,8 @@ export const styles = {
   infoCard: {
     height: "100%",
     transition: "0.56s",
-    background: '#2F2E2E',
+    // background: '#2F2E2E',
+    backgroundImage: 'url(/backgroundTest.png)',
     padding: ['20px'],
     borderRadius: '20px',
     cursor: "pointer",
@@ -92,7 +93,6 @@ export const styles = {
 
 
     h2: {
-      
       fontSize: ["11px"],
       textAlign: "center",
       background: '#8B8080',
